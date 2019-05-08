@@ -8,6 +8,7 @@ use Illuminate\Pagination\Paginator;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+//use Illuminate\Support\Facades\DB;
 
 
 class HomeController extends Controller
@@ -31,7 +32,9 @@ class HomeController extends Controller
     {
         $user= Auth::user();
         $questionTest=Question::all();
-        $questions= $user->questions()->paginate(6);
+
+        $sorted=$questionTest->sortByDesc('created_at');
+        $questionTest=$sorted->values()->all();
         $questionTest=$this->paginate($questionTest);
         return view('home')->with('questions',$questionTest);
     }
