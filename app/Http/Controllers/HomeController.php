@@ -54,5 +54,10 @@ class HomeController extends Controller
         return $lap;
     }
 
+    public function search(Request $request)
+    {
+        $questions = Question::all()->where('body', $request->name);
+        return view('search')->with('questions', $questions);
+    }
 
 }

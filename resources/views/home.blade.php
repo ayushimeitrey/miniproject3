@@ -6,12 +6,25 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">Questions
-                        <a class="btn btn-primary float-right" href="{{ route('questions.create') }}">
-                            Create a question.
-                        </a>
+
+                        <form role="form" id="search-form" class="search-form" method="get" action="{{ url('/home/search') }}">
+                            <div class="row float-lg-right">
+                                <div class="form-group">
+                                    <input name="name" type="text" class="form-control" id="name" placeholder="Type Exact Question Name">
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary" type="submit" id="search-form">Search</button>
+                                </div>
+                            </div>
+                        </form>
+
                     </div>
 
                     <div class="card-body">
+
+                        <a class="btn btn-primary float-right" href="{{ route('questions.create') }}">
+                            Create a question.
+                        </a>
 
                         <div class="card-deck">
                             @forelse($questions as $question)
