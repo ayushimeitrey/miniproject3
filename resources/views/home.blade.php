@@ -21,6 +21,12 @@
                                             <small class="text-muted">
                                                 Updated: {{ $question->created_at->diffForHumans() }}
                                                 Answers: {{ $question->answers()->count() }}
+                                                <br>
+                                                @if (\App\Profile::find ($question->user_id))
+                                                    Created By: {{ \App\Profile::find ($question->user_id)->fname }}
+                                                @else
+                                                    Created By: {{ \App\User::find($question->user_id)->email }}
+                                                @endif
 
                                             </small>
                                         </div>
