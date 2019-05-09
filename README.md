@@ -18,11 +18,24 @@ Project Link - http://am2862miniproject3.herokuapp.com/
  
 #Epic 1
 
-This feature allows only the authorized users to create or edi the questions and answers
+This feature allows only the authorized users to create or edit the questions and answers.
 
 #User Story
 
-1)As a user, only I should be able to delete my questions, so that other users are not able to delete it
-2)As a user, only I should be able to delete my answers, so that other users are not able to delete it
-3)As a user, only I should be able to edit my questions, so that other users are not able to edit it
-4)As a user, only I should be able to edit my answers, so that other users are not able to edit it
+1)As a user, only I should be able to delete my questions, so that other users are not able to delete it.
+2)As a user, only I should be able to delete my answers, so that other users are not able to delete it.
+3)As a user, only I should be able to edit my questions, so that other users are not able to edit it.
+4)As a user, only I should be able to edit my answers, so that other users are not able to edit it.
+
+
+Epic 2
+
+This feature allows users to search, sort and view all the questions.
+
+#User Story
+
+1)As a user, I should be able to search any question with exact name, so that I can find the questions easily.
+2)As a user, I should be able to see all the questions and answers created by other users, so that I can view them.
+3)As a user, I should be able to sort all the questions created by me based on recently updated, so that I can find the most recent questions created by me.
+4)As a user, I should be able to see the email of the users who created the questions, so that I know who all created the questions.
+5)As a user, I should be able to sort all the questions created by other users based on recently updated, so that I can find the most recent questions created by other users.
