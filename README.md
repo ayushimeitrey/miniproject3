@@ -39,3 +39,4 @@ This feature allows users to search, sort and view all the questions.
 3)As a user, I should be able to sort all the questions created by me based on recently updated, so that I can find the most recent questions created by me.
 4)As a user, I should be able to see the email of the users who created the questions, so that I know who all created the questions.
 5)As a user, I should be able to sort all the questions created by other users based on recently updated, so that I can find the most recent questions created by other users.
+6)As a user, I should be able to see all the questions and answers created by me, so that I can view them.
