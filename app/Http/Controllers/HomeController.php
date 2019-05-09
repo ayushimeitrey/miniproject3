@@ -65,7 +65,7 @@ class HomeController extends Controller
     public function sortAll()
     {
         $questions = Question::all()->sortByDesc('updated_at');
-        return view('home')->with('questions', $questions);
+        return view('viewAll')->with('questions', $questions);
     }
 
     public function showAllQuestions()

@@ -7,6 +7,10 @@
                 <a class="btn btn-primary float-left" href="{{ url('/home') }}">
                     <b>View My Questions</b>
                 </a>
+
+                <div>
+                    <button class="btn btn-primary float-left" style="margin-left:20px ;"><a style="color: white" href="{{ url('/home/sort/all') }}">Sort by recency</a></button>
+                </div>
             </div>
             <div class="container align-content-xl-between">
                 <hr>

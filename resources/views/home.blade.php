@@ -5,7 +5,12 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Questions
+                    <div class="card-header" style="font-weight: bolder">Questions
+
+                        <div>
+                            <button class="btn btn-primary"><a style="color: white" href="{{ url('/home/viewAll') }}">View All Questions</a></button>
+                        </div>
+
 
                         <form role="form" id="search-form" class="search-form" method="get" action="{{ url('/home/search') }}">
                             <div class="row float-lg-right">

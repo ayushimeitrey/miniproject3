@@ -38,5 +38,6 @@ Route::resources([
 ]);
 
 Route::get('/home/search', 'HomeController@search')->name('home.search');
-Route::get('/home/sort', 'HomeController@sortAll')->name('home.sortAll');
+
+Route::get('/home/sort/all', 'HomeController@sortAll')->name('home.sortAll');
 Route::get('/home/viewAll', 'HomeController@showAllQuestions')->name('viewAll');
