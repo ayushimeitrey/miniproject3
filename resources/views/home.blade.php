@@ -5,10 +5,12 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header" style="font-weight: bolder">Questions
+                    <div class="card-header" style="font-weight: bolder">
 
                         <div>
-                            <button class="btn btn-primary"><a style="color: white" href="{{ url('/home/viewAll') }}">View All Questions</a></button>
+                            <button class="btn btn-primary float-left"><a style="color: white" href="{{ url('/home/viewAll') }}">View All Questions</a></button>
+
+                            <button class="btn btn-primary float-left" style="margin-left:20px ;"><a style="color: white" href="{{ url('/home/sort') }}">Sort by recency</a></button>
                         </div>
 
 

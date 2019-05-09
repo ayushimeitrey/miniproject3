@@ -68,6 +68,13 @@ class HomeController extends Controller
         return view('viewAll')->with('questions', $questions);
     }
 
+    public function sort()
+    {
+        $user = Auth::user();
+        $questions = $user->questions()->orderByDesc('updated_at')->paginate(6);
+        return view('home')->with('questions', $questions);
+    }
+
     public function showAllQuestions()
     {
         $questions = Question::all();
