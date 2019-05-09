@@ -4,13 +4,13 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <a class="btn btn-primary float-left" href="{{ url('/home/viewAll') }}">
-                    <b>View All Questions</b>
+                <a class="btn btn-primary float-left" href="{{ url('/home') }}">
+                    <b>View My Questions</b>
                 </a>
-
             </div>
+            <div class="container align-content-xl-between">
+                <hr>
 
-            <div class="container align-content-xl-between"><hr>
                 <form role="form" id="search-form" class="search-form" method="get" action="{{ url('/home/search') }}">
                     <div class="row float-lg-right">
                         <div class="form-group">
@@ -40,8 +40,8 @@
                                         <div class="card mb-3 ">
                                             <div class="card-header">
                                                 <small class="text-muted">
-                                                    Updated: {{ $question->created_at->diffForHumans() }}<br>
-                                                    Answers: {{ $question->answers()->count() }}<br>
+                                                    Updated: {{ $question->created_at->diffForHumans() }}
+                                                    Answers: {{ $question->answers()->count() }}
                                                     Created By: {{\App\User::find($question->user_id)->email}}
 
                                                 </small>
@@ -64,7 +64,6 @@
                                 @endforelse
 
                             </div>
-
                         </div>
 
                     </div>

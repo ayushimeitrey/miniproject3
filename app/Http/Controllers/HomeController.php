@@ -31,11 +31,13 @@ class HomeController extends Controller
     public function index()
     {
         $user= Auth::user();
-        $questionTest=Question::all();
 
-        $sorted=$questionTest->sortByDesc('created_at');
-        $questionTest=$sorted->values()->all();
-        $questionTest=$this->paginate($questionTest);
+        $questionTest=$user->questions()->paginate(6);
+        //$questionTest=Question::all();
+
+        //$sorted=$questionTest->sortByDesc('created_at');
+        //$questionTest=$sorted->values()->all();
+        //$questionTest=$this->paginate($questionTest);
         return view('home')->with('questions',$questionTest);
     }
 
@@ -60,4 +62,15 @@ class HomeController extends Controller
         return view('search')->with('questions', $questions);
     }
 
+    public function sortAll()
+    {
+        $questions = Question::all()->sortByDesc('updated_at');
+        return view('home')->with('questions', $questions);
+    }
+
+    public function showAllQuestions()
+    {
+        $questions = Question::all();
+        return view('viewAll')->with('questions', $questions);
+    }
 }
